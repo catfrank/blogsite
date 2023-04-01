@@ -1,0 +1,143 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+div.content {
+    width: 100%;
+    max-width: 680px;
+    flex: 1 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 4rem auto;
+}
+h1.logo {
+    display: block;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    font-size: 2em;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+section p.no-margin-bottom {
+    display: block;
+    font-style: italic;
+    margin-block-start: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 10px;
+    margin-bottom: 0em;
+}
+section p.no-margin-top {
+    display: block;
+    font-style: italic;
+    margin-block-start: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 10px;
+    margin-bottom: 1em;
+}
+section p.no-margin {
+    display: block;
+    font-style: italic;
+    margin-block-start: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 10px;
+    margin-bottom: 0em;
+}
+section h2.chapter {
+    color: #007bff;
+    letter-spacing: 0.01em;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+section ul li a.title {
+    color: #333;
+    font-style: italic;
+    text-decoration-color: #007bff4f;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section ul li a.title:hover {
+    color: #333;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration-color: #007bff;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section h2.chapter-2 {
+    color: #07c160;
+    letter-spacing: 0.01em;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+section ul li a.title-2 {
+    color: #333;
+    font-style: italic;
+    text-decoration-color: #07c1604f;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section ul li a.title-2:hover {
+    color: #333;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration-color: #07c160;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section h2.capter-3 {
+    color: #870ad5;
+    letter-spacing: 0.01em;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+section ul li a.title-3 {
+    color: #333;
+    font-style: italic;
+    text-decoration-color: #870ad54f;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section ul li a.title-3:hover {
+    color: #333;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration-color: #870ad5;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section h2.capter-4 {
+    color: #d21010;
+    letter-spacing: 0.01em;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+section ul li a.title-4 {
+    color: #333;
+    font-style: italic;
+    text-decoration-color: #d2101000;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section ul li a.title-4:hover {
+    color: #333;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration-color: #d21010;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}

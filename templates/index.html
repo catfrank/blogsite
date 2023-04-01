@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    KP's Blog
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock %}
+
+{% block nav_home_activate %}active{% endblock %}
+
+{% block content %}
+<div style="display: flex">
+    <div class="content">
+        <h1 class="logo">KP's Blog</h1>
+        <section id="about">
+            <p class="no-margin-bottom">Hi, I'm KP! </p>
+            <p class="no-margin-top">Welcome to browse my website.</p>
+            <p class="no-margin">Find me building on 
+                <a href="#" style="color: #1d9bf0; text-decoration: none;">Github</a>
+            </p>
+            <p class="no-margin">sharing my thoughts on 
+                <a href="#" style="color: #1d9bf0; text-decoration: none;">Twitter</a>
+            </p>
+            <p class="no-margin">chat with me on 
+                <a href="#" style="color: #1d9bf0; text-decoration: none;">Telegram</a>
+            </p>
+            <p class="no-margin-bottom">Glance my books records on 
+                <a href="#" style="color: #07c160; text-decoration: none; ">豆瓣</a>
+            </p>
+            <p class="no-margin">seek my thought on 
+                <a href="#" style="color: #07c160; text-decoration: none;">微信公众号</a>
+            </p>
+            <p class="no-margin-top">and another 
+                <a href="#" style="color: #07c160; text-decoration: none;">Blog Site</a>
+            </p>
+            <p class="no-margin">You can contact me through email</p>
+            <p class="no-margin">and WeChat</p>
+            <p class="no-margin">Here is my brief information</p>
+        </section>
+        <section id="programs">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="chapter">Programs</h2>
+            </a>
+            <ul style="padding: 0px; list-style: none;">
+                {% for article in articles_all %}
+                    {% if article.article_type_id == 1 %}
+                        <li style="display: flex; margin-bottom: 12px;">
+                            <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
+                                <time>{{ article.created|date:"Y-m-d" }}</time>
+                            </div>
+                            <span>
+                                <a class="title" href="#">{{ article.title }}</a>
+                            </span>                                
+                        </li>
+                    {% endif %}
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section id="writings">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="chapter-2">Writings</h2>
+            </a>
+            <ul style="padding: 0px; list-style: none;">                
+                {% for article in articles_all %}
+                    {% if article.article_type_id == 2 %}
+                        <li style="display: flex; margin-bottom: 12px;">
+                            <span>
+                                <a class="title-2" href="#">{{ article.title }}</a>
+                            </span>                                
+                        </li>
+                    {% endif %}
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section id="words">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="capter-3">Words</h2>                
+            </a>
+            <p class="no-margin" style="color: #870ad5;"><b>词语收集</b></p>
+            <ul style="padding: 0px; list-style: none;">
+                {% for word in words_all %}
+                    <li style="display: flex; margin-bottom: 12px;">
+                        <span>
+                            <strong>
+                                <a class="title-3" href="#"># {{ word.word_title }}</a>                                
+                            </strong>
+                            &nbsp;&nbsp;&nbsp;{{ word.word_detail|slice:":80" }}......
+                        </span>
+                    </li>
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+                <li style="display: flex; margin-bottom: 12px;">
+                    <span>
+                        <a class="title-3" href="#">未完待续 ……</a>
+                    </span>
+                </li>                
+            </ul>
+        </section>
+        <section id="sentences">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="capter-4">Sentences</h2>
+            </a>
+            <p class="no-margin" style="color: #d21010;"><b>句子收集</b></p>
+            <ul style="padding: 0px; list-style: none;">                
+                {% for sentence in sentences_all %}
+                    <li style="display: flex; margin-bottom: 12px;">
+                        <span>
+                            <a class="title-4" href="#">{{ sentence }}</a>
+                        </span>
+                    </li>                    
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+                <li style="display: flex; margin-bottom: 12px;">
+                    <span>
+                        <a class="title-4" href="#">未完待续 ……</a>
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+{% endblock %}
