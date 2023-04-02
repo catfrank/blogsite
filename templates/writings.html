@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Writings | KP's Blog
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'writings.css' %}">
+{% endblock %}
+
+{% block nav_home_activate %}active{% endblock %}
+
+{% block content %}
+<div style="display: flex">
+    <div class="content">
+        <a href="{% url 'index' %}" style="text-decoration: none; color: #07c160; font-style: italic;">Home</a>
+        <section id="writings">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="chapter">writings</h2>
+            </a>
+            <ul style="padding: 0px; list-style: none;">
+                {% for writing in writings %}
+                    <li style="display: flex; margin-bottom: 12px;">
+                        <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
+                            <time>{{ writing.created|date:"Y-m-d" }}</time>
+                        </div>
+                        <span>
+                            <a class="title" href="#">{{ writing.title }}</a>
+                        </span>                                
+                    </li>
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>
+{% endblock %}

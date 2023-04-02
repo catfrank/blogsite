@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Sentences | KP's Blog
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'sentences.css' %}">
+{% endblock %}
+
+{% block nav_home_activate %}active{% endblock %}
+
+{% block content %}
+<div style="display: flex">
+    <div class="content">
+        <a href="{% url 'index' %}" style="text-decoration: none; color: #d21010; font-style: italic;">Home</a>
+        <section id="programs">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="chapter">Sentences</h2>
+            </a>
+            <ul style="padding: 0px; list-style: none;">
+                {% for sentence in sentences %}
+                    <li style="display: flex; margin-bottom: 12px;">
+                        <p>{{ sentence.sentence }}</p>
+                    </li>                    
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>
+{% endblock %}

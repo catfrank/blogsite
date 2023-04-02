@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Words | KP's Blog
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'words.css' %}">
+{% endblock %}
+
+{% block nav_home_activate %}active{% endblock %}
+
+{% block content %}
+<div style="display: flex">
+    <div class="content">
+        <a href="{% url 'index' %}" style="text-decoration: none; color: #870ad5; font-style: italic;">Home</a>
+        <section id="programs">
+            <a href="#" style="text-decoration: none;">
+                <h2 class="chapter">Words</h2>
+            </a>
+            <ul style="padding: 0px; list-style: none;">
+                {% for word in words %}
+                    <li style="display: flex; margin-bottom: 12px;">
+                        <span>
+                            <strong># {{ word.word_title }}</strong>
+                            <p>{{ word.word_detail }}</p>
+                        </span>
+                    </li>                    
+                {% empty %}
+                    <li>{{ Empty }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>
+{% endblock %}

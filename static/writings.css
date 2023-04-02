@@ -1,0 +1,33 @@
+div.content {
+    width: 100%;
+    max-width: 680px;
+    flex: 1 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 4rem auto;
+}
+section h2.chapter {
+    color: #07c160;
+    letter-spacing: 0.01em;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+section ul li a.title {
+    color: #333;
+    font-style: italic;
+    text-decoration-color: #07c1604f;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section ul li a.title:hover {
+    color: #333;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration-color: #07c160;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
