@@ -26,7 +26,7 @@
                             <time>{{ writing.created|date:"Y-m-d" }}</time>
                         </div>
                         <span>
-                            <a class="title" href="#">{{ writing.title }}</a>
+                            <a class="title" href="{% url 'writing_detail' writing.pk %}">{{ writing.title }}</a>
                         </span>                                
                     </li>
                 {% empty %}

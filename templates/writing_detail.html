@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ writing.title }} | KP's Blog
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'writing_detail.css' %}">
+{% endblock %}
+
+{% block nav_home_activate %}active{% endblock %}
+
+{% block content %}
+<div class="content">
+    <a href="{% url 'writings' %}" style="color: #07c160;">Writings</a>
+    <article>
+        <header>
+            <h1>{{ writing.title }}</h1>
+            <div>
+                <time>{{ writing.created }}</time>
+            </div>
+            <div>
+                <div>
+                    {% for pro in writing.tags.all %}
+                        <a href="#" style="margin-right: 8px; display: inline-block;">#{{ pro }}</a>
+                    {% empty %}
+                        <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </header>
+        <ul style="padding: 0px; list-style: none;">
+            <li style="display: flex; margin-bottom: 12px;">                
+                <div>
+                    {{ writing.content }}
+                </div>
+            </li>
+        </ul>
+    </article>
+</div>
+{% endblock %}

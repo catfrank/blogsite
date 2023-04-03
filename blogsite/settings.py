@@ -36,6 +36,10 @@ INSTALLED_APPS = [
     # 项目应用
     'blog.apps.BlogConfig',
 
+    # 第三方应用
+    'ckeditor',
+    'ckeditor_uploader',
+
     # 默认应用
     'django.contrib.admin',
     'django.contrib.auth',
@@ -134,3 +138,40 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# ckeditor文件上传路径
+CKEDITOR_UPLOAD_PATH = 'upload/'
+
+# ckeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'skin': 'moono-lisa',
+        'toolbar_Basic': [
+            ['Source', '-', 'Bold', 'Italic']
+        ],
+        'toolbar_Full': [
+            [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ],
+            [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ],
+
+            [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ],
+            [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ],
+            '/',
+            [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ],
+            [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv', '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ],
+            [ 'Link','Unlink','Anchor' ],
+            [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ],
+            '/',
+            [ 'Styles','Format','Font','FontSize' ] ,
+            [ 'TextColor','BGColor' ] ,
+            [ 'Maximize', 'ShowBlocks','-','About' ] ,
+            ['CodeSnippet'],
+
+        ],
+        'toolbar': 'Full',
+        'extraPlugins': 'codesnippet',   #代码段插件
+    }
+}

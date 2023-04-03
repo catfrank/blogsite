@@ -1,0 +1,8 @@
+div.content {
+    width: 100%;
+    max-width: 680px;
+    flex: 1 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 4rem auto;
+}

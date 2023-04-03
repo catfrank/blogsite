@@ -2,6 +2,8 @@ from datetime import date
 
 from django.db import models
 
+from ckeditor_uploader.fields import RichTextUploadingField
+
 
 # 名词解释
 class Words(models.Model):
@@ -54,7 +56,7 @@ class Articles(models.Model):
     last_updated_time = models.DateTimeField(auto_now=True)
     # 文章正文
     # content = RichTextUploadingField()
-    content = models.TextField()
+    content = RichTextUploadingField()
     # 标记是否删除
     is_deleted = models.BooleanField(default=False)
 

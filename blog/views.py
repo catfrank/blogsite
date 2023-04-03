@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 from .models import Articles, Tags, Words, Sentences
 
@@ -9,8 +8,8 @@ def index(request):
     context = {
          'articles_all': articles,
          'tags_all': Tags.objects.all(),
-         'words_all': Words.objects.all(),
-         'sentences_all': Sentences.objects.all(),
+         'words_all': Words.objects.order_by('?')[:2],
+         'sentences_all': Sentences.objects.order_by('?')[:2],
     }
     return render(request, 'index.html', context)
 
@@ -22,13 +21,29 @@ def programs(request):
     }
     return render(request, 'programs.html', context)
 
+# program_detail视图
+def program_detail(request, articles_id):
+    program = Articles.objects.get(pk = articles_id)
+    context = {
+        'program': program,
+    }
+    return render(request, 'program_detail.html', context)
+
 # Writings视图
 def writings(request):
     writings = Articles.objects.filter(article_type_id = 2)
     context = {
-        'writings': writings,
+        'writings': writings,        
     }
     return render(request, 'writings.html', context)
+
+# writing_detail视图
+def writing_detail(request, articles_id):
+    writing = Articles.objects.get(pk = articles_id)
+    context = {
+        'writing': writing,
+    }
+    return render(request, 'writing_detail.html', context)
 
 # Words视图
 def words(request):

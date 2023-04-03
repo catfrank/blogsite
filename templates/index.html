@@ -52,7 +52,7 @@
                                 <time>{{ article.created|date:"Y-m-d" }}</time>
                             </div>
                             <span>
-                                <a class="title" href="#">{{ article.title }}</a>
+                                <a class="title" href="{% url 'program_detail' article.pk %}">{{ article.title }}</a>
                             </span>                                
                         </li>
                     {% endif %}
@@ -70,7 +70,7 @@
                     {% if article.article_type_id == 2 %}
                         <li style="display: flex; margin-bottom: 12px;">
                             <span>
-                                <a class="title-2" href="#">{{ article.title }}</a>
+                                <a class="title-2" href="{% url 'writing_detail' article.pk %}">{{ article.title }}</a>
                             </span>                                
                         </li>
                     {% endif %}
@@ -89,9 +89,10 @@
                     <li style="display: flex; margin-bottom: 12px;">
                         <span>
                             <strong>
-                                <a class="title-3" href="#"># {{ word.word_title }}</a>                                
+                                <a class="title-3" href="#" onclick="return false"># {{ word.word_title }}</a>                                
                             </strong>
-                            &nbsp;&nbsp;&nbsp;{{ word.word_detail|slice:":80" }}......
+                            <!-- &nbsp;&nbsp;&nbsp;{{ word.word_detail|slice:":80" }}...... -->
+                            &nbsp;&nbsp;&nbsp;{{ word.word_detail }}
                         </span>
                     </li>
                 {% empty %}
@@ -99,7 +100,7 @@
                 {% endfor %}
                 <li style="display: flex; margin-bottom: 12px;">
                     <span>
-                        <a class="title-3" href="#">未完待续 ……</a>
+                        <a class="title-3" href="{% url 'words' %}">未完待续 ……</a>
                     </span>
                 </li>                
             </ul>
@@ -113,7 +114,7 @@
                 {% for sentence in sentences_all %}
                     <li style="display: flex; margin-bottom: 12px;">
                         <span>
-                            <a class="title-4" href="#">{{ sentence }}</a>
+                            <a class="title-4" href="#" onclick="return false">{{ sentence }}</a>
                         </span>
                     </li>                    
                 {% empty %}
@@ -121,7 +122,7 @@
                 {% endfor %}
                 <li style="display: flex; margin-bottom: 12px;">
                     <span>
-                        <a class="title-4" href="#">未完待续 ……</a>
+                        <a class="title-4" href="{% url 'sentences' %}">未完待续 ……</a>
                     </span>
                 </li>
             </ul>
