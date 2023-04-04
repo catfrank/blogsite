@@ -22,8 +22,8 @@
             <ul style="padding: 0px; list-style: none;">
                 {% for sentence in sentences %}
                     <li style="display: flex; margin-bottom: 12px;">
-                        <p>{{ sentence.sentence }}</p>
-                    </li>                    
+                        <a href="#" onclick="return false">{{ sentence.sentence|safe }}</a>
+                    </li>
                 {% empty %}
                     <li>{{ Empty }}</li>
                 {% endfor %}

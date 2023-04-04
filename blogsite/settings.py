@@ -149,7 +149,10 @@ CKEDITOR_UPLOAD_PATH = 'upload/'
 # ckeditor
 CKEDITOR_CONFIGS = {
     'default': {
+        'height': '100%',
+        'width': '100%',
         'skin': 'moono-lisa',
+        
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],
@@ -172,6 +175,7 @@ CKEDITOR_CONFIGS = {
 
         ],
         'toolbar': 'Full',
-        'extraPlugins': 'codesnippet',   #代码段插件
+        # 'extraPlugins': 'codesnippet'
+        'extraPlugins': ','.join(['codesnippet', 'prism', 'widget', 'lineutils']),
     }
 }

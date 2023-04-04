@@ -114,9 +114,9 @@
                 {% for sentence in sentences_all %}
                     <li style="display: flex; margin-bottom: 12px;">
                         <span>
-                            <a class="title-4" href="#" onclick="return false">{{ sentence }}</a>
+                            <a class="title-4" href="#" onclick="return false">{{ sentence|safe }}</a>
                         </span>
-                    </li>                    
+                    </li>
                 {% empty %}
                     <li>{{ Empty }}</li>
                 {% endfor %}

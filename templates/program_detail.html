@@ -7,6 +7,9 @@
 
 {% block header_extends %}
     <link rel="stylesheet" href="{% static 'program_detail.css' %}">
+    <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'prism.css' %}">
+    <link rel="stylesheet" href="{% static 'img.css' %}">
 {% endblock %}
 
 {% block nav_home_activate %}active{% endblock %}
@@ -21,9 +24,9 @@
                 <time>{{ program.created }}</time>
             </div>
             <div>
-                <div>
+                <div style="font-size: 0.85rem; display: inline;">
                     {% for pro in program.tags.all %}
-                        <a href="#" style="margin-right: 8px; display: inline-block;">#{{ pro }}</a>
+                        <a href="#" style="color: #333; margin-right: 8px; display: inline-block; text-decoration-color: #a5a5a5; text-decoration-thickness: 2px;">#{{ pro }}</a>
                     {% empty %}
                         <br>
                     {% endfor %}
@@ -32,7 +35,7 @@
         </header>
         <ul style="padding: 0px; list-style: none;">
             <li style="display: flex; margin-bottom: 12px;">                
-                <div>
+                <div style="margin-left: 2em; margin-right: 2em;">
                     {{ program.content|safe }}
                 </div>
             </li>

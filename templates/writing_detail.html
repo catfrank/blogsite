@@ -7,6 +7,7 @@
 
 {% block header_extends %}
     <link rel="stylesheet" href="{% static 'writing_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'img.css' %}">
 {% endblock %}
 
 {% block nav_home_activate %}active{% endblock %}
@@ -33,7 +34,7 @@
         <ul style="padding: 0px; list-style: none;">
             <li style="display: flex; margin-bottom: 12px;">                
                 <div>
-                    {{ writing.content }}
+                    {{ writing.content|safe }}
                 </div>
             </li>
         </ul>

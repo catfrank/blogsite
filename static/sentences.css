@@ -16,3 +16,18 @@ section h2.chapter {
     margin-bottom: 1rem;
     display: block;
 }
+section ul li a {
+    color: #333;
+    font-style: normal;
+    text-decoration-color: #d2101000;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+section ul li a:hover {
+    color: #333;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration-color: #d21010;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
