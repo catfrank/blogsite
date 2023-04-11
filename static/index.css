@@ -1,5 +1,16 @@
-*, :after, :before {
+*,
+:after,
+:before {
     box-sizing: border-box;
+}
+body {
+    background: #f8f4ed;
+}
+header {
+    /* background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%); */
+    /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+    background-color:#8076a3;
+
 }
 div.content {
     width: 100%;
@@ -9,6 +20,7 @@ div.content {
     padding-right: 1rem;
     margin: 4rem auto;
 }
+
 h1.logo {
     display: block;
     font-style: italic;
@@ -17,6 +29,7 @@ h1.logo {
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
+
 section p.no-margin-bottom {
     display: block;
     font-style: italic;
@@ -25,6 +38,7 @@ section p.no-margin-bottom {
     margin-inline-end: 10px;
     margin-bottom: 0em;
 }
+
 section p.no-margin-top {
     display: block;
     font-style: italic;
@@ -33,6 +47,7 @@ section p.no-margin-top {
     margin-inline-end: 10px;
     margin-bottom: 1em;
 }
+
 section p.no-margin {
     display: block;
     font-style: italic;
@@ -41,6 +56,7 @@ section p.no-margin {
     margin-inline-end: 10px;
     margin-bottom: 0em;
 }
+
 section h2.chapter {
     color: #007bff;
     letter-spacing: 0.01em;
@@ -51,6 +67,7 @@ section h2.chapter {
     margin-bottom: 1rem;
     display: block;
 }
+
 section ul li a.title {
     color: #333;
     font-style: italic;
@@ -58,6 +75,7 @@ section ul li a.title {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section ul li a.title:hover {
     color: #333;
     font-weight: bold;
@@ -66,6 +84,7 @@ section ul li a.title:hover {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section h2.chapter-2 {
     color: #07c160;
     letter-spacing: 0.01em;
@@ -76,6 +95,7 @@ section h2.chapter-2 {
     margin-bottom: 1rem;
     display: block;
 }
+
 section ul li a.title-2 {
     color: #333;
     font-style: italic;
@@ -83,6 +103,7 @@ section ul li a.title-2 {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section ul li a.title-2:hover {
     color: #333;
     font-weight: bold;
@@ -91,6 +112,7 @@ section ul li a.title-2:hover {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section h2.capter-3 {
     color: #870ad5;
     letter-spacing: 0.01em;
@@ -101,6 +123,7 @@ section h2.capter-3 {
     margin-bottom: 1rem;
     display: block;
 }
+
 section ul li a.title-3 {
     color: #333;
     font-style: italic;
@@ -108,6 +131,7 @@ section ul li a.title-3 {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section ul li a.title-3:hover {
     color: #333;
     font-weight: bold;
@@ -116,6 +140,7 @@ section ul li a.title-3:hover {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section h2.capter-4 {
     color: #d21010;
     letter-spacing: 0.01em;
@@ -126,6 +151,7 @@ section h2.capter-4 {
     margin-bottom: 1rem;
     display: block;
 }
+
 section ul li a.title-4 {
     color: #333;
     font-style: normal;
@@ -133,6 +159,7 @@ section ul li a.title-4 {
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
 }
+
 section ul li a.title-4:hover {
     color: #333;
     font-weight: bold;

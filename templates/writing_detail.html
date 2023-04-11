@@ -16,28 +16,29 @@
 <div class="content">
     <a href="{% url 'writings' %}" style="color: #07c160;">Writings</a>
     <article>
-        <header>
+        <header style="padding-top: 25px;">
             <h1>{{ writing.title }}</h1>
             <div>
-                <time>{{ writing.created }}</time>
-            </div>
-            <div>
                 <div>
-                    {% for pro in writing.tags.all %}
-                        <a href="#" style="margin-right: 8px; display: inline-block;">#{{ pro }}</a>
+                    {% for tag in writing.tags.all %}
+                        <a href="#" style="display: inline-block; margin-right: 8px; font-size: 0.85rem;">#{{ tag }}</a>
                     {% empty %}
                         <br>
                     {% endfor %}
                 </div>
+                <author style="margin-left: 8px; font-size: 0.85rem;">KP</author>
+                <div style="display: inline; margin-left: 8px; margin-right: 8px; font-size: 0.85rem;">
+                    <time>{{ writing.created }}</time>
+                </div>
             </div>
         </header>
-        <ul style="padding: 0px; list-style: none;">
-            <li style="display: flex; margin-bottom: 12px;">                
+        <div style="padding: 0px; list-style: none;">
+            <div style="display: flex; margin-bottom: 12px;">                
                 <div>
                     {{ writing.content|safe }}
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </article>
 </div>
 {% endblock %}

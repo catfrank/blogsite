@@ -4,6 +4,9 @@ from django.shortcuts import render
 
 from .models import Articles, Tags, Words, Sentences
 
+def home(request):
+    return render(request, 'home.html')
+
 # 主页视图
 def index(request):
     articles = Articles.objects.order_by('-created')
