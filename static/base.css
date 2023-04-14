@@ -3,10 +3,18 @@
     padding: 0px;
 }
 
+body {
+    background: #f8f4ed;
+    line-height: 1.5;
+}
+
 header {
     position: relative;
     padding: 0;
+    background-image: linear-gradient(to right, #eea2a24f 0%, #bbc1bf4f 19%, #57c5e14f 42%, #b49fda4f 79%, #7ac5d84f 100%);
+    background-color: #8076a3c4;
 }
+
 li {
     list-style: none;
 }
@@ -99,7 +107,7 @@ a:hover {
 
 .dropdown_menu.open {
     background-color: rgba(128, 128, 128, 0.5);
-    height: 275px;
+    height: 325px;
 }
 
 .dropdown_menu .action_btn {
@@ -137,7 +145,7 @@ a:hover {
     font-size: 11px;
     max-width: 700px;
     width: 100%;
-    margin: 0px auto;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     align-items: center;

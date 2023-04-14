@@ -69,6 +69,9 @@
                 {% for article in articles_all %}
                     {% if article.article_type_id == 2 %}
                         <li style="display: flex; margin-bottom: 12px;">
+                            <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
+                                <time>{{ article.created|date:"Y-m-d" }}</time>
+                            </div>
                             <span>
                                 <a class="title-2" href="{% url 'writing_detail' article.pk %}">{{ article.title }}</a>
                             </span>                                

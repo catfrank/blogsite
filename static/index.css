@@ -1,17 +1,11 @@
-*,
-:after,
-:before {
-    box-sizing: border-box;
-}
+
 body {
     background: #f8f4ed;
+    background-size: cover;
+    background-position: center;
+    line-height: 1.5;
 }
-header {
-    /* background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%); */
-    /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
-    background-color:#8076a3;
 
-}
 div.content {
     width: 100%;
     max-width: 680px;
@@ -80,6 +74,7 @@ section ul li a.title:hover {
     color: #333;
     font-weight: bold;
     font-style: normal;
+    text-decoration-line: underline;
     text-decoration-color: #007bff;
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
@@ -108,6 +103,7 @@ section ul li a.title-2:hover {
     color: #333;
     font-weight: bold;
     font-style: normal;
+    text-decoration-line: underline;
     text-decoration-color: #07c160;
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
@@ -136,6 +132,7 @@ section ul li a.title-3:hover {
     color: #333;
     font-weight: bold;
     font-style: normal;
+    text-decoration-line: underline;
     text-decoration-color: #870ad5;
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;
@@ -164,6 +161,8 @@ section ul li a.title-4:hover {
     color: #333;
     font-weight: bold;
     font-style: normal;
+    font-size: 1.1rem;
+    text-decoration-line: underline;
     text-decoration-color: #d21010;
     text-decoration-thickness: 2px;
     text-decoration-skip-ink: none;

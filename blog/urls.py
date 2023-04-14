@@ -15,6 +15,8 @@ urlpatterns = [
     path('words/', views.words, name='words'),
     # sentences内容页
     path('sentences/', views.sentences, name='sentences'),
+    # about页面
+    path('about/', views.about, name='about'),
     # programs类型下具体某篇文章
     path('programs/<int:articles_id>', views.program_detail, name='program_detail'),
     # writings类型下具体某篇文章

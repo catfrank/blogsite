@@ -1,8 +1,12 @@
 
-* {
-    margin: 0px;
-    padding: 0px;
+header {
+    background-image: none;
+    background-color: #8076a300;
 }
+
+/* 字体 */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
 body {
     height: 100vh;
     background-color: rgba(95, 158, 160, 0);
@@ -12,7 +16,7 @@ body {
     border-color: #000000;
     line-height: 1.5;
     color: #000000;
-    font-family: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Caveat", sans-serif;
 }
 section#hero {
     height: calc(100vh - 132px);

@@ -18,6 +18,10 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+# about页面
+def about(request):
+    return render(request, 'about.html')
+
 # Programs视图
 def programs(request):
     programs = Articles.objects.filter(article_type_id = 1)
