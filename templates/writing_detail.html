@@ -13,32 +13,16 @@
 {% block nav_home_activate %}active{% endblock %}
 
 {% block content %}
-<div class="content">
+<div class="main">
     <a href="{% url 'writings' %}" style="color: #07c160;">Writings</a>
-    <article>
-        <header style="padding-top: 25px;">
-            <h1>{{ writing.title }}</h1>
-            <div>
-                <div>
-                    {% for tag in writing.tags.all %}
-                        <a href="#" style="display: inline-block; margin-right: 8px; font-size: 0.85rem;">#{{ tag }}</a>
-                    {% empty %}
-                        <br>
-                    {% endfor %}
-                </div>
-                <author style="margin-left: 8px; font-size: 0.85rem;">KP</author>
-                <div style="display: inline; margin-left: 8px; margin-right: 8px; font-size: 0.85rem;">
-                    <time>{{ writing.created }}</time>
-                </div>
-            </div>
-        </header>
-        <div style="padding: 0px; list-style: none;">
-            <div style="display: flex; margin-bottom: 12px;">                
-                <div>
-                    {{ writing.content|safe }}
-                </div>
-            </div>
+    <div class="header">
+        <h1>{{ writing.title }}</h1>
+        <div>
+            <time>{{ writing.created }}</time>
         </div>
-    </article>
+    </div>         
+    <div class="content">
+        {{ writing.content|safe }}
+    </div>
 </div>
 {% endblock %}
