@@ -107,7 +107,7 @@ a:hover {
 
 .dropdown_menu.open {
     background-color: rgba(128, 128, 128, 0.5);
-    height: 325px;
+    height: 240px;
 }
 
 .dropdown_menu .action_btn {

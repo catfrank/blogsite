@@ -15,52 +15,6 @@
 <div style="display: flex">
     <div class="content">
         <h1 class="logo">KP's Blog</h1>
-        <section id="about">
-            <p class="no-margin-bottom">Hi, I'm KP! </p>
-            <p class="no-margin-top">Welcome to browse my website.</p>
-            <p class="no-margin">Find me building on 
-                <a href="#" style="color: #1d9bf0; text-decoration: none;">Github</a>
-            </p>
-            <p class="no-margin">sharing my thoughts on 
-                <a href="#" style="color: #1d9bf0; text-decoration: none;">Twitter</a>
-            </p>
-            <p class="no-margin">chat with me on 
-                <a href="#" style="color: #1d9bf0; text-decoration: none;">Telegram</a>
-            </p>
-            <p class="no-margin-bottom">Glance my books records on 
-                <a href="#" style="color: #07c160; text-decoration: none; ">豆瓣</a>
-            </p>
-            <p class="no-margin">seek my thought on 
-                <a href="#" style="color: #07c160; text-decoration: none;">微信公众号</a>
-            </p>
-            <p class="no-margin-top">and another 
-                <a href="#" style="color: #07c160; text-decoration: none;">Blog Site</a>
-            </p>
-            <p class="no-margin">You can contact me through email</p>
-            <p class="no-margin">and WeChat</p>
-            <p class="no-margin">Here is my brief information</p>
-        </section>
-        <section id="programs">
-            <a href="{% url 'programs' %}" style="text-decoration: none;">
-                <h2 class="chapter">Programs</h2>
-            </a>
-            <ul style="padding: 0px; list-style: none;">
-                {% for article in articles_all %}
-                    {% if article.article_type_id == 1 %}
-                        <li style="display: flex; margin-bottom: 12px;">
-                            <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
-                                <time>{{ article.created|date:"Y-m-d" }}</time>
-                            </div>
-                            <span>
-                                <a class="title" href="{% url 'program_detail' article.pk %}">{{ article.title }}</a>
-                            </span>                                
-                        </li>
-                    {% endif %}
-                {% empty %}
-                    <li>{{ Empty }}</li>
-                {% endfor %}
-            </ul>
-        </section>
         <section id="writings">
             <a href="{% url 'writings' %}" style="text-decoration: none;">
                 <h2 class="chapter-2">Writings</h2>

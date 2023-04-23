@@ -24,33 +24,6 @@ h1.logo {
     margin-bottom: 1rem;
 }
 
-section p.no-margin-bottom {
-    display: block;
-    font-style: italic;
-    margin-block-start: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 10px;
-    margin-bottom: 0em;
-}
-
-section p.no-margin-top {
-    display: block;
-    font-style: italic;
-    margin-block-start: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 10px;
-    margin-bottom: 1em;
-}
-
-section p.no-margin {
-    display: block;
-    font-style: italic;
-    margin-block-start: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 10px;
-    margin-bottom: 0em;
-}
-
 section h2.chapter {
     color: #007bff;
     letter-spacing: 0.01em;
