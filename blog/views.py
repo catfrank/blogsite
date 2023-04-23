@@ -1,5 +1,3 @@
-import markdown
-
 from django.shortcuts import render
 
 from .models import Articles, Tags, Words, Sentences
@@ -20,7 +18,7 @@ def index(request):
 
 # Writings视图
 def writings(request):
-    writings = Articles.objects.filter(article_type_id = 2)
+    writings = Articles.objects.order_by('-created')
     context = {
         'writings': writings,        
     }
