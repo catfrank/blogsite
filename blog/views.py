@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from .models import Articles, Tags, Words, Sentences
 
+import markdown
+
 def home(request):
     return render(request, 'home.html')
 
@@ -27,6 +29,16 @@ def writings(request):
 # writing_detail视图
 def writing_detail(request, articles_id):
     writing = Articles.objects.get(pk = articles_id)
+
+    # 将md语法渲染成html样式
+    writing.content = markdown.markdown(writing.content,
+        extensions=[
+        # 缩写、表格等常用扩展
+        'markdown.extensions.extra',
+        # 语法高亮扩展
+        'markdown.extensions.codehilite',
+        ])
+    
     context = {
         'writing': writing,
     }
