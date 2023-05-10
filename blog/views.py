@@ -13,7 +13,7 @@ def index(request):
     context = {
         'articles_all': articles,
         'tags_all': Tags.objects.all(),
-        'words_all': Words.objects.order_by('?')[:7],
+        'words_all': Words.objects.order_by('?')[:3],
         'sentences_all': Sentences.objects.order_by('?')[:7],
     }
     return render(request, 'index.html', context)

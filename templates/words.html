@@ -24,7 +24,7 @@
                     <li style="display: flex; margin-bottom: 12px;">
                         <span>
                             <strong># {{ word.word_title }}</strong>
-                            <p>{{ word.word_detail }}</p>
+                            <p>{{ word.word_detail|safe }}</p>
                         </span>
                     </li>                    
                 {% empty %}

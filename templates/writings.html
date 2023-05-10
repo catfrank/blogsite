@@ -21,14 +21,16 @@
             </a>
             <ul style="padding: 0px; list-style: none;">
                 {% for writing in writings %}
-                    <li style="display: flex; margin-bottom: 12px;">
-                        <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
-                            <time>{{ writing.created|date:"Y-m-d" }}</time>
-                        </div>
-                        <span>
-                            <a class="title" href="{% url 'writing_detail' writing.pk %}">{{ writing.title }}</a>
-                        </span>                                
-                    </li>
+                    {% if writing.is_deleted == False %}
+                        <li style="display: flex; margin-bottom: 12px;">
+                            <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
+                                <time>{{ writing.created|date:"Y-m-d" }}</time>
+                            </div>
+                            <span>
+                                <a class="title" href="{% url 'writing_detail' writing.pk %}">{{ writing.title }}</a>
+                            </span>                                
+                        </li>
+                    {% endif %}
                 {% empty %}
                     <li>{{ Empty }}</li>
                 {% endfor %}

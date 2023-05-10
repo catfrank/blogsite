@@ -14,7 +14,8 @@
 {% block content %}
 <div style="display: flex">
     <div class="content">
-        <h1 class="logo">KP's Blog</h1>
+        <h1 class="logo">KP's Site</h1>
+        <p class="no-margin" style="margin-bottom: 15px;"><b>文字还能传达多少效用？</b></p>
         <section id="writings">
             <a href="{% url 'writings' %}" style="text-decoration: none;">
                 <h2 class="chapter-2">Writings</h2>
@@ -23,14 +24,16 @@
             <ul style="padding: 0px; list-style: none;">                
                 {% for article in articles_all %}
                     {% if article.article_type_id == 2 %}
-                        <li style="display: flex; margin-bottom: 12px;">
-                            <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
-                                <time>{{ article.created|date:"Y-m-d" }}</time>
-                            </div>
-                            <span>
-                                <a class="title-2" href="{% url 'writing_detail' article.pk %}">{{ article.title }}</a>
-                            </span>                                
-                        </li>
+                        {% if article.is_deleted == False %}
+                            <li style="display: flex; margin-bottom: 12px;">
+                                <div style="display: block; font-style: italic; font-size: 15px; min-width: 100px; margin-right: 16px;">
+                                    <time>{{ article.created|date:"Y-m-d" }}</time>
+                                </div>
+                                <span>
+                                    <a class="title-2" href="{% url 'writing_detail' article.pk %}">{{ article.title }}</a>
+                                </span>                                
+                            </li>
+                        {% endif %}
                     {% endif %}
                 {% empty %}
                     <li>{{ Empty }}</li>
@@ -50,7 +53,7 @@
                                 <a class="title-3" href="#" onclick="return false"># {{ word.word_title }}</a>                                
                             </strong>
                             <!-- {{ word.word_detail|slice:":80" }}...... -->
-                            &nbsp;&nbsp;&nbsp;{{ word.word_detail }}
+                            &nbsp;&nbsp;&nbsp;{{ word.word_detail|safe }}
                         </span>
                     </li>
                 {% empty %}
