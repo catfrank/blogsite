@@ -17,7 +17,7 @@ h6 {
 p {
     display: block;
     margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin-block-end: 1.5em;
 }
 
 a {
@@ -33,7 +33,7 @@ div.main {
 }
 
 div.content {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 1rem auto;
     line-height: 1.8;
 }

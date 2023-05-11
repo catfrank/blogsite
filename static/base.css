@@ -21,7 +21,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     font-size: 1rem;
 }
 
@@ -151,7 +151,7 @@ a:hover {
     align-items: center;
 }
 
-.footer .footer-right {
+.footer {
     margin-bottom: 0px;
 }
 
