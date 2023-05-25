@@ -15,12 +15,13 @@
 <div style="display: flex">
     <div class="content">
         <h1 class="logo">KP's Site</h1>
-        <p class="no-margin" style="margin-bottom: 15px;"><b>文字还能传达多少效用？</b></p>
+        <p class="no-margin" style="margin-top: 15px;"><b>文字還能傳達多少效用？</b></p>
+        <p class="no-margin" style="margin-bottom: 0px;"><b>銳利的矛，刺痛麻木的<span style="font-size: 2rem; color: #d21010;">腦</span></b></p>
         <section id="writings">
             <a href="{% url 'writings' %}" style="text-decoration: none;">
                 <h2 class="chapter-2">Writings</h2>
             </a>
-            <p class="no-margin" style="color: #07c160; margin-bottom: 15px;"><b>潦倒不通事务，愚顽怕读文章。</b></p>
+            <p class="no-margin" style="color: #07c160; margin-bottom: 15px;"><b>潦倒不通事務，愚頑怕讀文章。</b></p>
             <ul style="padding: 0px; list-style: none;">                
                 {% for article in articles_all %}
                     {% if article.article_type_id == 2 %}
@@ -44,7 +45,7 @@
             <a href="{% url 'words' %}" style="text-decoration: none;">
                 <h2 class="capter-3">Words</h2>                
             </a>
-            <p class="no-margin" style="color: #870ad5; margin-bottom: 15px;"><b>满纸自怜提素怨，片言谁解诉秋心。</b></p>
+            <p class="no-margin" style="color: #870ad5; margin-bottom: 15px;"><b>滿紙自憐提素怨，片言誰解訴秋心。</b></p>
             <ul style="padding: 0px; list-style: none;">
                 {% for word in words_all %}
                     <li style="display: flex; margin-bottom: 12px;">
@@ -70,7 +71,7 @@
             <a href="{% url 'sentences' %}" style="text-decoration: none;">
                 <h2 class="capter-4">Sentences</h2>
             </a>
-            <p class="no-margin" style="color: #d21010; margin-bottom: 15px;"><b>早知日后争闲气，岂肯今朝错读书。</b></p>
+            <p class="no-margin" style="color: #d21010; margin-bottom: 15px;"><b>早知日後爭閑氣，豈肯今朝錯讀書。</b></p>
             <ul style="padding: 0px; list-style: none;">                
                 {% for sentence in sentences_all %}
                     <li style="display: flex; margin-bottom: 12px;">

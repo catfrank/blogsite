@@ -22,23 +22,23 @@
       <div class="navbar">
         <div class="baselogo"><a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt=""></a></div>
         <ul class="links">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'writings' %}">Writing</a></li>
-          <li><a href="{% url 'words' %}">Word</a></li>
-          <li><a href="{% url 'sentences' %}">Sentence</a></li>
+          <li><a href="{% url 'index' %}" style="color: white;">Home</a></li>
+          <li><a href="{% url 'writings' %}" style="color: white;">Writing</a></li>
+          <li><a href="{% url 'words' %}" style="color: white;">Word</a></li>
+          <li><a href="{% url 'sentences' %}" style="color: white;">Sentence</a></li>
         </ul>
-        <a href="{% url 'index' %}" class="action_btn">STARTED</a>
+        <a href="{% url 'index' %}" class="action_btn" style="color: white;">STARTED</a>
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
       </div>
   
       <div class="dropdown_menu">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'writings' %}">Writing</a></li>
-          <li><a href="{% url 'words' %}">Word</a></li>
-          <li><a href="{% url 'sentences' %}">Sentence</a></li>
-          <li><a href="{% url 'index' %}" class="action_btn">STARTED</a></li>
+          <li><a href="{% url 'index' %}" style="color: white;">Home</a></li>
+          <li><a href="{% url 'writings' %}" style="color: white;">Writing</a></li>
+          <li><a href="{% url 'words' %}" style="color: white;">Word</a></li>
+          <li><a href="{% url 'sentences' %}" style="color: white;">Sentence</a></li>
+          <li><a href="{% url 'index' %}" class="action_btn" style="color: white;">STARTED</a></li>
       </div>
   
       <script>
@@ -62,9 +62,9 @@
     <!-- 尾部 -->
     <footer id="footer" class="footer">
       <!-- <div>Copyright © 023 KP</div> -->
-      <div>
+      <!-- <div>
         <a href="http://beian.miit.gov.cn/" style="font-size: 12px; color: black;">赣ICP备2023004404号</a>
-      </div>
+      </div> -->
     </footer>
   </body>
 </html>

@@ -21,12 +21,16 @@ li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: deepskyblue;
     font-size: 1rem;
 }
 
 a:hover {
     color: orange;
+}
+
+table {
+    text-align: center;
 }
 
 /* 导航栏 */
