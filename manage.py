@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+"""
+1. workon blogsite 启动虚拟环境
+2. python manage.py runserver 启动项目
+"""
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
